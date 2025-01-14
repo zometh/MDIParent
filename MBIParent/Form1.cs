@@ -19,12 +19,14 @@ namespace MBIParent
 
         private void listeÉtudianToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form listeEtudiant = new RapportEtudiant();
+            listeEtudiant.Show();
+            listeEtudiant.MdiParent = this;
         }
 
         private void fermerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
 
         private void etudiantToolStripMenuItem_Click(object sender, EventArgs e)
@@ -39,6 +41,13 @@ namespace MBIParent
             Form formClasse = new FormClasse();
             formClasse.Show();
             formClasse.MdiParent = this;
+        }
+
+        private void listeClassesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form listeClasse = new RapportClasse();
+            listeClasse.Show();
+            listeClasse.MdiParent = this;
         }
     }
 }

@@ -64,14 +64,14 @@
             // etudiantToolStripMenuItem
             // 
             this.etudiantToolStripMenuItem.Name = "etudiantToolStripMenuItem";
-            this.etudiantToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.etudiantToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
             this.etudiantToolStripMenuItem.Text = "Etudiant";
             this.etudiantToolStripMenuItem.Click += new System.EventHandler(this.etudiantToolStripMenuItem_Click);
             // 
             // classeToolStripMenuItem
             // 
             this.classeToolStripMenuItem.Name = "classeToolStripMenuItem";
-            this.classeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.classeToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
             this.classeToolStripMenuItem.Text = "Classe";
             this.classeToolStripMenuItem.Click += new System.EventHandler(this.classeToolStripMenuItem_Click);
             // 
@@ -96,6 +96,7 @@
             this.listeClassesToolStripMenuItem.Name = "listeClassesToolStripMenuItem";
             this.listeClassesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.listeClassesToolStripMenuItem.Text = "Liste classes";
+            this.listeClassesToolStripMenuItem.Click += new System.EventHandler(this.listeClassesToolStripMenuItem_Click);
             // 
             // fermerToolStripMenuItem
             // 
