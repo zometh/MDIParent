@@ -39,17 +39,33 @@ namespace MBIParent
                     {
                         Libelle = textLibelle.Text
                     };
-                    db.Classes.Add(classe);
-                    db.SaveChanges();
-                    MessageBox.Show(
-                            "Classe ajoutée avec succès",
-                            "",
-                            MessageBoxButtons.OK
+                    int nbOccurence = db.Classes
+                        .Where(c => c.Libelle.ToLower() == classe.Libelle.ToLower()).ToList().Count();
+                    if(nbOccurence == 0)
+                    {
+                        db.Classes.Add(classe);
+                        db.SaveChanges();
+                        MessageBox.Show(
+                                "Classe ajoutée avec succès",
+                                "",
+                                MessageBoxButtons.OK
 
 
-                            );
-                    ClearFields();
-                    refresh();
+                                );
+                        ClearFields();
+                        refresh();
+                    }
+                    else
+                    {
+                        MessageBox.Show(
+                           "Cette classe existe déja",
+                           "",
+                           MessageBoxButtons.OK,
+                           icon: MessageBoxIcon.Error
+
+                           );
+                    }
+                    
                 }
             }
             else
@@ -100,6 +116,7 @@ namespace MBIParent
                         result.Libelle = textLibelle.Text;
                         db.Classes.AddOrUpdate(result);
                         db.SaveChanges();
+                        ClearFields();
                         MessageBox.Show(
                             "Classe modifiée avec succès",
                             "",
