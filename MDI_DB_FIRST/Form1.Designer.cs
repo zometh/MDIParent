@@ -43,6 +43,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button9 = new System.Windows.Forms.Button();
+            this.textSearch = new System.Windows.Forms.TextBox();
             this.comboBoxClasse = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textAge = new System.Windows.Forms.TextBox();
@@ -74,9 +76,6 @@
             this.dbfirstDataSet1 = new MDI_DB_FIRST.dbfirstDataSet1();
             this.classeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.classeTableAdapter1 = new MDI_DB_FIRST.dbfirstDataSet1TableAdapters.ClasseTableAdapter();
-            this.textSearch = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -111,7 +110,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1160, 611);
+            this.tabPage1.Size = new System.Drawing.Size(1160, 738);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -262,7 +261,6 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.button9);
-            this.tabPage2.Controls.Add(this.button8);
             this.tabPage2.Controls.Add(this.textSearch);
             this.tabPage2.Controls.Add(this.comboBoxClasse);
             this.tabPage2.Controls.Add(this.label10);
@@ -292,6 +290,29 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.SteelBlue;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button9.Location = new System.Drawing.Point(214, 6);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(112, 37);
+            this.button9.TabIndex = 23;
+            this.button9.Text = "Effacer";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // textSearch
+            // 
+            this.textSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textSearch.Location = new System.Drawing.Point(7, 13);
+            this.textSearch.Multiline = true;
+            this.textSearch.Name = "textSearch";
+            this.textSearch.Size = new System.Drawing.Size(177, 26);
+            this.textSearch.TabIndex = 21;
+            this.textSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // comboBoxClasse
             // 
@@ -524,7 +545,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1160, 611);
+            this.tabPage3.Size = new System.Drawing.Size(1160, 738);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -573,41 +594,6 @@
             // classeTableAdapter1
             // 
             this.classeTableAdapter1.ClearBeforeFill = true;
-            // 
-            // textSearch
-            // 
-            this.textSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textSearch.Location = new System.Drawing.Point(7, 13);
-            this.textSearch.Multiline = true;
-            this.textSearch.Name = "textSearch";
-            this.textSearch.Size = new System.Drawing.Size(177, 26);
-            this.textSearch.TabIndex = 21;
-            this.textSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Teal;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Location = new System.Drawing.Point(190, 6);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(112, 37);
-            this.button8.TabIndex = 22;
-            this.button8.Text = "Rechercher";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.SteelBlue;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button9.Location = new System.Drawing.Point(308, 6);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(112, 37);
-            this.button9.TabIndex = 23;
-            this.button9.Text = "Effacer";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // Form1
             // 
@@ -685,7 +671,6 @@
         private dbfirstDataSet1 dbfirstDataSet1;
         private System.Windows.Forms.BindingSource classeBindingSource1;
         private dbfirstDataSet1TableAdapters.ClasseTableAdapter classeTableAdapter1;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox textSearch;
         private System.Windows.Forms.Button button9;
     }
