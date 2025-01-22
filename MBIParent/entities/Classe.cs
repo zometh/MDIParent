@@ -12,4 +12,5 @@ namespace MBIParent.entities
         public string Libelle { get; set; }
         ICollection<Etudiant> etudiants { get; set; }
     }
+    
 }
